@@ -26,8 +26,8 @@ public class Lottery {
         for (int i = 0; i < 7; i++) {
             int randomNumber = getRandomNumber();
             boolean isUnique = true;
-            for (int j = 0; j < i; j++) {
-                if (randomNumber == lotteryNumbers[j]) {
+            for (int j : lotteryNumbers) {
+                if (randomNumber == j) {
                     isUnique = false;
                     break;
                 }
