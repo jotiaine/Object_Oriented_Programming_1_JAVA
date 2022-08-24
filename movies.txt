@@ -1,15 +1,5 @@
 Joni's favourite movies:
 Movie: Titanic
-Grade: 4
-Comment: ok
-
-Joni's favourite movies:
-Movie: Kakkos movies
-Grade: 2
-Comment: nice
-
-Joni's favourite movies:
-Movie: Random movie
-Grade: 7
-Comment: iha jepa
+Grade: 5
+Comment: Ok movie
 
