@@ -1,0 +1,154 @@
+import java.util.Scanner;
+
+public class App {
+    private static Scanner input;
+    private static CalculateClass myObj;
+    private static double number1;
+    private static double number2;
+    private static int choice;
+
+    public static void main(String[] args) {
+
+        try {
+            input = new Scanner(System.in);
+
+            // 2.
+            myObj = new CalculateClass();
+
+            // 3.
+            askUser();
+
+            // Testing
+            // myObj.setNumber1(3);
+            // System.out.println(myObj.getNumber1());
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            input.close();
+        }
+    }
+
+    public static void askUser() {
+        // 3.2
+        while (true) {
+
+            System.out.println("Enter a number: ");
+            number1 = input.nextDouble();
+            System.out.println("Enter another number: ");
+            number2 = input.nextDouble();
+            System.out.println("What do you want to do with the numbers:");
+            System.out.println("1) Add together");
+            System.out.println("2) Subtract");
+            System.out.println("3) Multiply");
+            System.out.println("4) Divide");
+            System.out.println("5) Quit the program");
+            System.out.println("Please enter your choice:");
+            choice = input.nextInt();
+
+            // 3.1
+            if (choice == 1) {
+                myObj.addTogether(number1, number2);
+                continueOrQuit();
+
+                // 3.3
+                if (choice == 2)
+                    break;
+            } else if (choice == 2) {
+                myObj.subtract(number1, number2);
+                continueOrQuit();
+
+                // 3.3
+                if (choice == 2)
+                    break;
+            } else if (choice == 3) {
+                myObj.multiply(number1, number2);
+                continueOrQuit();
+
+                // 3.3
+                if (choice == 2)
+                    break;
+            } else if (choice == 4) {
+                myObj.divide(number1, number2);
+                continueOrQuit();
+
+                // 3.3
+                if (choice == 2)
+                    break;
+            } else if (choice == 5)
+                break;
+            else
+                System.out.println("Invalid choice");
+        }
+    }
+
+    public static void continueOrQuit() {
+        System.out.println("Do you want to continue or quit the program? (1) Continue or (2) Quit");
+        choice = input.nextInt();
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Could be done also with a constructor and then with getters and setters
+
+public class CalculateClass {
+  private double number1;
+  private double number2;
+  private double sum;
+  private double subtraction;
+  private double multiplication;
+  private double division;
+
+  public double getNumber1() {
+    return number1;
+  }
+
+  protected void setNumber1(double newNumber1) {
+    number1 = newNumber1;
+  }
+
+  protected double getNumber2() {
+    return number2;
+  }
+
+  protected void setNumber2(double newNumber2) {
+    number2 = newNumber2;
+  }
+
+  protected void addTogether(double number1, double number2) {
+    sum = number1 + number2;
+    System.out.println("Addition is: " + sum);
+  }
+
+  protected void subtract(double number1, double number2) {
+    subtraction = number1 - number2;
+    System.out.println("Subtraction is: " + subtraction);
+  }
+
+  protected void multiply(double number1, double number2) {
+    multiplication = number1 * number2;
+    System.out.println("Multiplication is: " + multiplication);
+  }
+
+  protected void divide(double number1, double number2) {
+    division = number1 / number2;
+    System.out.println("Division is: " + division);
+  }
+}
