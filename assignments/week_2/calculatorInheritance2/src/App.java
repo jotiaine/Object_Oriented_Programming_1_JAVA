@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /*
  *  1. Ask what the user wants to calculate(*+-/)
- *    1.1 AskCoder numbers for calculations
+ *    1.1 Ask for numbers for calculations
  *    1.2 Print given numbers
  *    1.3 Call chosen basicCalculator method depending on the user's choice(1, 2  3, 4) 
  *    1.4 Ask user what specialCalculation he/she wants to do

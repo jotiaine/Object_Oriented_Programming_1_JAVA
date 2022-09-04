@@ -6,9 +6,10 @@ public class Show {
   protected double grade;
   protected String critic;
 
-  public Show(String title, String[] directors, String[] actors, double grade, String critic) {
+  public Show(String title, int publishYear, String[] directors, String[] actors, double grade, String critic) {
     this.title = title;
-    this.director = directors;
+    this.publishYear = publishYear;
+    this.directors = directors;
     this.actors = actors;
     this.grade = grade;
     this.critic = critic;
@@ -23,7 +24,7 @@ public class Show {
     return publishYear;
   }
 
-  public String getDirectors() {
+  public String[] getDirectors() {
     return directors;
   }
 

@@ -8,12 +8,13 @@ public class App {
         Movie deerHunter;
         Series got;
 
-        deerHunter = new Movie("Deer Hunter", 2017, 120, new String[] { "Taika Waititi" },
-                new String[] { "Taika Waititi" },
-                9.0, "Excellent movie!");
+        deerHunter = new Movie("Deer Hunter", 2017, new String[] { "Taika Waititi" }, new String[] { "Kaitlyn Dever" },
+                8.0, "Good", 120);
 
-        got = new Series("Game of Thrones", 2011, 100, new String[] { "David Benioff" },
-                new String[] { "Peter Dinklage" }, 9.0, "Good");
+        got = new Series("Game of Thrones", 2011, new String[] { "David Benioff", "D. B. Weiss" },
+                new String[] { "Peter Dinklage", "Kit Harington", "Iwan Rheon", "Lena Headey", "Emilia Clarke",
+                        "Aidan Gillen" },
+                9.0, "Great show", 10);
 
         deerHunter.getShowInfo();// // Variables
         got.getShowInfo();// // Variables

@@ -1,9 +1,9 @@
 public class Series extends Show {
   private int episodes;
 
-  public Series(String title, int publishYear, int episodes, String[] directors, String[] actors, double grade,
-      String critic) {
-    super(title, publishYear, episodes, directors, actors, grade, critic);
+  public Series(String title, int publishYear, String[] directors, String[] actors,
+      double grade, String critic, int episodes) {
+    super(title, publishYear, directors, actors, grade, critic);
     this.episodes = episodes;
   }
 
